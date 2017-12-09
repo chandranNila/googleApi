@@ -25,18 +25,6 @@ export class CommonService {
     this.service.options = new RequestOptions({headers: this.service.header});
     /*console.log('environment', environment.baseUrl);*/
   }
-  storeData: any;
-
- /* setValue (value) {
-    console.log('value ser', value);
-    this.storeData = value;
-    console.log('this.storeData', this.storeData);
-  }
-
-  getValue () {
-    console.log('this.storeData', this.storeData);
-    return this.storeData;
-  }*/
 
   getValue (maxResults) {
     console.log('maxResults', maxResults);
@@ -69,6 +57,18 @@ export class CommonService {
     });
   }
 
+    showUserDetails() {
+        return new Promise((resolve, reject) => {
+            this.http.get('https://www.googleapis.com/drive/v2/about', this.service.options)
+                .map(res => res.json())
+                .subscribe(res => {
+                    console.log('res', res);
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
+    }
 
 
  /* driveDownloadFile(downloadUrl) {

@@ -1,52 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-   <!-- Welcome to {{title}}!-->
-  </h1>
-</div>
-<div class="">
-  <button id="glogin">Start</button>
-  <!--(click)="start()"-->
-  <button (click)="getlistFiles()">user</button>
+    <router-outlet></router-outlet>
 </div>
 
-<div id="drive-box" class="clearfix"><!--class="hide"-->
+<div id="drive-box" class="clearfix">
 
-  <div id="drive-breadcrumb">
+  <!--<div id="drive-breadcrumb">
     <span class='breadcrumb-arrow'></span> <a data-id='root' data-level='0'>Home</a>
     <span id="span-navigation"></span>
-  </div>
+  </div>-->
 
-  <div id="drive-info">
-    <div class="user-item">Welcome  <span id="span-name"></span></div><!--{{driveInfo.name}}--><!--span-name-->
+  <!--<div id="drive-info">
+    <div class="user-item">Welcome  <span id="span-name"></span></div>&lt;!&ndash;{{driveInfo.name}}&ndash;&gt;&lt;!&ndash;span-name&ndash;&gt;
     <div class="user-item">Total Quota: <span id="span-totalQuota"></span></div>
     <div class="user-item">Used Quota: <span id="span-usedQuota"></span></div>
-    <!--<div class="user-item">Share Mode: <span id="span-sharemode">OFF</span></div>-->
     <div class="user-item"><a id="link-logout" class="logout-link" href="https://accounts.google.com/logout">Logout</a></div>
-  </div>
+  </div>-->
 
 
-  <div id="drive-menu">
+  <!--<div id="drive-menu">
     <div id="button-reload" title="Refresh"></div>
     <div id="button-upload" title="Upload to Google Drive" class="button-opt"></div>
     <div id="button-addfolder" title="Add Folder" class="button-opt"></div>
     <div id="button-share" title="Show shared files only"></div>
-  </div>
-  <div class="myLabel">
+  </div>-->
+  <!--<div class="myLabel">
     <input type="file" class="hide_file" (change)="onChange($event)"/>
     <span>Upload</span>
-  </div>
-  <!--<div>
-    <input type="file" id="flup" (change)="getFolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple />
   </div>-->
 
-<!--  <div>
-    <input type="file"  class="hide_file upload-file" name="profile" accept="image/*" data-max-size="1000000"  (change)="onChange($event)"/>&lt;!&ndash;accept=".xls"&ndash;&gt;&lt;!&ndash;[(ngModel)]="groupFile" (change)="onChange($event)"&ndash;&gt;
-    <input type="image" class="hide_file  upload-file" accept="image/*" src="../assets/img/button_upload.png" (change)="onChange($event)"/>
-  </div>-->
-
-
-  <div id="drive-content">
+  <!--<div id="drive-content">
     <div class="file-box" *ngFor="let driveFiles of allFilesData">
       <div class="file-icon">
         <div class="image-preview">
@@ -55,12 +38,12 @@
       </div>
       <div class="item-title">{{driveFiles.title}}</div>
       <div class="button-box">
-        <a class="button-download" [href]="driveFiles.webContentLink" data-id="{{driveFiles.id}}" ></a><!--(click)="downloadFile(driveFiles.webContentLink)"-->
+        <a class="button-download" [href]="driveFiles.webContentLink" data-id="{{driveFiles.id}}" ></a>&lt;!&ndash;(click)="downloadFile(driveFiles.webContentLink)"&ndash;&gt;
         <div class="button-info" id="clickModel" (click)="individualFile(driveFiles)"></div>
         <div class="button-delete"></div>
       </div>
     </div>
-  </div>
+  </div>-->
 </div>
 
 
